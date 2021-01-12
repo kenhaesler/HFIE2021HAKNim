@@ -1,2 +1,3 @@
 ﻿  NimGame.c
-  NimGame.vcxproj -> C:\Users\kenha\Documents\GIT\HFIE2021HAKNim\NimGame\Debug\NimGame.exe
+C:\Users\Ken\Documents\GIT\C\HFIE2021HAKNim\NimGame\NimGame.c(33,10): warning C4101: "startgame": Unreferenzierte lokale Variable
+  NimGame.vcxproj -> C:\Users\Ken\Documents\GIT\C\HFIE2021HAKNim\NimGame\Debug\NimGame.exe
