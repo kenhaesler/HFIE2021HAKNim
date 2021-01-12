@@ -33,9 +33,10 @@ int main()
     char startgame[10];
     int num;
     int arraylocation;
+    int nimdata[4] = { 1,3,5,7 };
 
-    //while (startflag != 1) {
-        int nimdata[4] = { 1,3,5,7 };
+    while (startflag != 1) {
+        
         showNimGame(nimdata);
         AskUser(&arraylocation, &num);
         //printf("Arraylocation: %i", arraylocation+1);
@@ -44,9 +45,18 @@ int main()
         }
         else { printf("Die Zahl ist zu hoch!"); }
         
-        showNimGame(nimdata);
-    //}
-}
+        //showNimGame(nimdata);
+
+        int countarray = 0;
+
+        for (int i = 0; i < sizeof(nimdata);i++) {
+            countarray += nimdata[i];
+        }
+        if (countarray = 0) { startflag = 1; }
+
+
+        }
+    }
 
 
 void showNimGame(int nimdata[]) {
@@ -54,18 +64,26 @@ void showNimGame(int nimdata[]) {
     int count;
     for (i = 0; 3 >= i; i++) {
         //printf("Die Zahl im array ist %i\n", nimdata[i]);
-        if (i < 1) { printf("\n"); }
+        if (i < 1) { 
+            printf("\n"); 
+            printf("--------------------------------\n");
+        }
         for (count = nimdata[i] + 1; count > 1; count--) {
             printf("I ");
         }
         printf("\n");
+       
     }
+    
+    printf("--------------------------------\n");
 }
 
 
 void AskUser(int* arraylocation, int* num) {
     printf("\nWhich row: ");
     scanf_s("%i", arraylocation);
+
+    if (*arraylocation > 5) {}
 
    *arraylocation = *arraylocation - 1;
     //printf("Arraylocation in function: %i", *arraylocation);
