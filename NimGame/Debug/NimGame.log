@@ -1,7 +1,10 @@
 ﻿  NimGame.c
-C:\Users\kenha\Documents\GIT\HFIE2021HAKNim\NimGame\NimGame.c(17,10): warning C4101: 'startgame': unreferenced local variable
-C:\Users\kenha\Documents\GIT\HFIE2021HAKNim\NimGame\NimGame.c(87,21): warning C4047: 'function': 'int *' differs in levels of indirection from 'int **'
-C:\Users\kenha\Documents\GIT\HFIE2021HAKNim\NimGame\NimGame.c(87,17): warning C4024: 'AskUser': different types for formal and actual parameter 1
-C:\Users\kenha\Documents\GIT\HFIE2021HAKNim\NimGame\NimGame.c(87,27): warning C4047: 'function': 'int *' differs in levels of indirection from 'int **'
-C:\Users\kenha\Documents\GIT\HFIE2021HAKNim\NimGame\NimGame.c(87,23): warning C4024: 'AskUser': different types for formal and actual parameter 2
-  NimGame.vcxproj -> C:\Users\kenha\Documents\GIT\HFIE2021HAKNim\NimGame\Debug\NimGame.exe
+C:\Users\Ken\Documents\GIT\C\HFIE2021HAKNim\NimGame\NimGame.c(39,34): warning C4020: "ComputerMove": zu viele übergebene Parameter
+C:\Users\Ken\Documents\GIT\C\HFIE2021HAKNim\NimGame\NimGame.c(56,5): warning C4550: Ausdruck wird als Funktion ausgewertet, der eine Argumentliste fehlt
+C:\Users\Ken\Documents\GIT\C\HFIE2021HAKNim\NimGame\NimGame.c(21,10): warning C4101: "startgame": Unreferenzierte lokale Variable
+C:\Users\Ken\Documents\GIT\C\HFIE2021HAKNim\NimGame\NimGame.c(90,21): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "int *" und "int **" unterschiedlich
+C:\Users\Ken\Documents\GIT\C\HFIE2021HAKNim\NimGame\NimGame.c(90,17): warning C4024: "AskUser": unterschiedliche Typen für formalen und übergebenen Parameter 1
+C:\Users\Ken\Documents\GIT\C\HFIE2021HAKNim\NimGame\NimGame.c(90,27): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "int *" und "int **" unterschiedlich
+C:\Users\Ken\Documents\GIT\C\HFIE2021HAKNim\NimGame\NimGame.c(90,23): warning C4024: "AskUser": unterschiedliche Typen für formalen und übergebenen Parameter 2
+C:\Users\Ken\Documents\GIT\C\HFIE2021HAKNim\NimGame\NimGame.c(111,56): warning C4029: Deklarierte Liste formaler Parameter weicht von der Definition ab
+  NimGame.vcxproj -> C:\Users\Ken\Documents\GIT\C\HFIE2021HAKNim\NimGame\Debug\NimGame.exe
