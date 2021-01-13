@@ -1,3 +1,7 @@
 ﻿  NimGame.c
-C:\Users\Ken\Documents\GIT\C\HFIE2021HAKNim\NimGame\NimGame.c(33,10): warning C4101: "startgame": Unreferenzierte lokale Variable
-  NimGame.vcxproj -> C:\Users\Ken\Documents\GIT\C\HFIE2021HAKNim\NimGame\Debug\NimGame.exe
+C:\Users\kenha\Documents\GIT\HFIE2021HAKNim\NimGame\NimGame.c(17,10): warning C4101: 'startgame': unreferenced local variable
+C:\Users\kenha\Documents\GIT\HFIE2021HAKNim\NimGame\NimGame.c(87,21): warning C4047: 'function': 'int *' differs in levels of indirection from 'int **'
+C:\Users\kenha\Documents\GIT\HFIE2021HAKNim\NimGame\NimGame.c(87,17): warning C4024: 'AskUser': different types for formal and actual parameter 1
+C:\Users\kenha\Documents\GIT\HFIE2021HAKNim\NimGame\NimGame.c(87,27): warning C4047: 'function': 'int *' differs in levels of indirection from 'int **'
+C:\Users\kenha\Documents\GIT\HFIE2021HAKNim\NimGame\NimGame.c(87,23): warning C4024: 'AskUser': different types for formal and actual parameter 2
+  NimGame.vcxproj -> C:\Users\kenha\Documents\GIT\HFIE2021HAKNim\NimGame\Debug\NimGame.exe
