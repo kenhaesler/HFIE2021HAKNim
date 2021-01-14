@@ -132,6 +132,7 @@ void ComputerMove(int nimdata[], const int difficulty) {
         else {
             printf("My bad, the computer won!");
         }
+        stopflag = 1;
     }
 
 }
