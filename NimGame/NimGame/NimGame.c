@@ -66,7 +66,7 @@ void NewMove(int* row, int* num, const int player, int nimdata[]) {
 	if (player == 1) {
 		printf("\nPLAYER MAKING MOVE: ");
 		AskPlayer(row, num);
-		if (*row >= nimarraysize || *num > nimdata[*row]) {
+		if (*row >= nimarraysize || *num > nimdata[*row] || *num <= 0) {
 			printf("\nDEAR USER: PLEASE PROVIDE CORRECT INPUT INFORMATION - 1 Move suspended\n");
 			fflush(stdin);
 			*row = 0;
