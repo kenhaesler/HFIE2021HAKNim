@@ -28,7 +28,31 @@ int main()
 
 	CreateRandomNimNum(nimdata);
 
-	while (gamestate == 0) {
+	if (player == 0) {
+		
+	}
+
+
+	do {
+		gamestate = CheckGameStatus(nimdata);
+		player = 0;
+		ShowNimGame(nimdata);
+		AskUserMove(&row, &num);
+		datacheck = CheckInput(row, num, nimdata);
+		if (datacheck == 1) {
+			ShowNimGame(nimdata);
+			AskUserMove(&row, &num);
+		}
+		NewMove(row, num, nimdata, &player);
+		gamestate = CheckGameStatus(nimdata);
+		player = 1;
+		ComputerMove(nimdata);
+
+	} while (gamestate == 0);
+
+	/*while (gamestate == 0) {
+		gamestate = CheckGameStatus(nimdata);
+		player = 0;
 		ShowNimGame(nimdata);
 		AskUserMove(&row, &num);
 		datacheck = CheckInput(row, num, nimdata);
@@ -38,10 +62,9 @@ int main()
 		}
 		NewMove(row, num, nimdata, &player);
 		gamestate = CheckGameStatus(nimdata);
-		//playermove = 1;
+		player = 1;
 		ComputerMove(nimdata);
-		gamestate = CheckGameStatus(nimdata);
-	}
+	}*/
 
 	system("cls");
 	printf("GAME FINISHED!!!!");
@@ -125,7 +148,10 @@ int CheckGameStatus(const int nimdata[]) {
 	}
 
 	if (sum != 0) { return 0; }
-	else { return 1; }
+	else { 
+		return 1;
+		exit;
+	}
 }
 
 int CheckInput(int row, int num, const int nimdata[]) {
