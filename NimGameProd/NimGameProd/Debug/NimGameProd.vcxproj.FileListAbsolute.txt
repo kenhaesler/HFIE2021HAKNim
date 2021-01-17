@@ -1,2 +1,0 @@
-C:\Users\Ken\Documents\GIT\C\HFIE2021HAKNim\NimGameProd\NimGameProd\Debug\NimGameProd.exe
-C:\Users\Ken\Documents\GIT\C\HFIE2021HAKNim\NimGameProd\NimGameProd\Debug\NimGameProd.pdb

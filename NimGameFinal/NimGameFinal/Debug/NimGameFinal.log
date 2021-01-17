@@ -1,7 +1,0 @@
-﻿  NimGameFinal.c
-C:\Users\Ken\Documents\GIT\C\HFIE2021HAKNim\NimGameFinal\NimGameFinal\NimGameFinal.c(76,6): warning C4101: "count": Unreferenzierte lokale Variable
-C:\Users\Ken\Documents\GIT\C\HFIE2021HAKNim\NimGameFinal\NimGameFinal\NimGameFinal.c(134,30): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "int *" und "int" unterschiedlich
-C:\Users\Ken\Documents\GIT\C\HFIE2021HAKNim\NimGameFinal\NimGameFinal\NimGameFinal.c(134,29): warning C4024: "NewMove": unterschiedliche Typen für formalen und übergebenen Parameter 4
-C:\Users\Ken\Documents\GIT\C\HFIE2021HAKNim\NimGameFinal\NimGameFinal\NimGameFinal.c(149,3): warning C4550: Ausdruck wird als Funktion ausgewertet, der eine Argumentliste fehlt
-C:\Users\Ken\Documents\GIT\C\HFIE2021HAKNim\NimGameFinal\NimGameFinal\NimGameFinal.c(137): warning C4716: "ComputerMove": Muss einen Wert zurückgeben
-  NimGameFinal.vcxproj -> C:\Users\Ken\Documents\GIT\C\HFIE2021HAKNim\NimGameFinal\NimGameFinal\Debug\NimGameFinal.exe
