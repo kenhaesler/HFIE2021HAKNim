@@ -5,7 +5,7 @@
 
 #define nimarraysize 4
 void CreateRandomNimNum(int nimdata[]); // Create random nim game array
-void ShowNimGame(int nimdata[]);
+void ShowNimGame(const int nimdata[]);
 void NewMove(int* row, int* num, const int player, int nimdata[]);
 void AskPlayer(int* row, int* num);
 int CheckGameStatus(const int nimdata[]);
@@ -44,7 +44,7 @@ void CreateRandomNimNum(int nimdata[]) {
 	}
 }
 
-void ShowNimGame(int nimdata[]) {
+void ShowNimGame(const int nimdata[]) {
 	int count = 0;
 	char divider[] = "-------------------------";
 
@@ -56,7 +56,6 @@ void ShowNimGame(int nimdata[]) {
 
 		for (int nimvalue = nimdata[count]; nimvalue != 0; nimvalue--) { printf("I "); }
 
-
 		printf("\n");
 		if (count == nimarraysize - 1) { printf("%s\n", divider); }
 	}
@@ -65,10 +64,10 @@ void ShowNimGame(int nimdata[]) {
 
 void NewMove(int* row, int* num, const int player, int nimdata[]) {
 	if (player == 1) {
-		printf("\n PLAYER MAKING MOVE\n");
+		printf("\nPLAYER MAKING MOVE: ");
 		AskPlayer(row, num);
 		if (*row >= nimarraysize || *num > nimdata[*row]) {
-			printf("DEAR USER: PLEASE PROVIDE CORRECT INPUT INFORMATION - 1 Move suspended");
+			printf("\nDEAR USER: PLEASE PROVIDE CORRECT INPUT INFORMATION - 1 Move suspended\n");
 			fflush(stdin);
 			*row = 0;
 			*num = 0;
@@ -76,7 +75,7 @@ void NewMove(int* row, int* num, const int player, int nimdata[]) {
 		}
 	}
 	else {
-		printf("\n COMPUTER MAKING MOVE\n");
+		printf("\nCOMPUTER MAKING MOVE: ");
 		int movefound = 0;
 		while (movefound != 1) {
 			for (int count = 0; count < nimarraysize; count++) {
@@ -88,7 +87,7 @@ void NewMove(int* row, int* num, const int player, int nimdata[]) {
 			}
 		}
 	}
-	printf("Removing %i from row %i", *num, *row);
+	printf("Removing %i from row %i\n", *num, *row);
 	nimdata[*row] = nimdata[*row] - *num;
 }
 

@@ -1,0 +1,2 @@
+C:\Users\Ken\Documents\GIT\C\HFIE2021HAKNim\NimGame\NimGame\Debug\NimGame.exe
+C:\Users\Ken\Documents\GIT\C\HFIE2021HAKNim\NimGame\NimGame\Debug\NimGame.pdb
