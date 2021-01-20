@@ -10,10 +10,20 @@ void NewMove(int* row, int* num, const int player, int nimdata[]);
 void AskPlayer(int* row, int* num);
 int CheckGameStatus(const int nimdata[]);
 
+// vorschlag
+typedef enum
+{
+    Human,
+    Machine
+} Player_t;
+
+
+const char* text[] = {"winner message", "looser message"};
+
 int main()
 {
 	int gamestate = 0; // Status of the running game -> 0 = Running / 1 = Finished
-	int player = 1; // 0 = Player / 1 = Computer
+	int player = 1; // 0 = Player / 1 = Computer <== rla: das stimmt nicht mit dem Code überein! 0 und 1 waeren die bessere Wahl!
 	int row = 0; // variable for userinput
 	int num = 0; // variable for userinput
 	int nimdata[nimarraysize] = { 0 };
@@ -21,17 +31,23 @@ int main()
 
 	CreateRandomNimNum(nimdata);
 
+    // das entspricht nicht ihrem UML Diagramm!
+    // - sie pruefen am Ende der Schlaufe ob das Spiel zuende ist
+    // - sie fuehren abwechselnd einen Zug des Spielers und einen Zug der Maschine aus
+    // - wenn ein Spieler einen ungueltigen Zug macht, wird ein 0-Zug ausgeführt.
 	do {
 		ShowNimGame(nimdata);
-		NewMove(&row, &num, player, nimdata);
+		NewMove( player, nimdata);  // wenn row und num ausserhalb der Funktion nie verwendet werden, weshalb sind es dann "Out-Parameter"?
 		getchar();
 		system("cls");
-		player = (player == 1) ? 2 : 1;
+		player = (player == 1) ? 2 : 1;       // player = (player + 1) %2 wäre einfacher.
 		gamestate = CheckGameStatus(nimdata);
 	} while (gamestate == 0);
 
-	winner = (player == 1) ? 2 : 1;
+	winner = (player == 1) ? 2 : 1; 
 
+    // mit player = 0 oder 1 könnte man einfach eine Meldung  aus einer entsprechenden tabelle abrufen und drucken
+    // dann braucht es hier kein if mehr!
 	if (winner == 1) { printf("\nThe Winner is: YOU!\n"); }
 	else { printf("\nThe Winner is: COMPUTER!\n"); }
 	getchar();
@@ -46,7 +62,7 @@ void CreateRandomNimNum(int nimdata[]) {
 
 void ShowNimGame(const int nimdata[]) {
 	int count = 0;
-	char divider[] = "-------------------------";
+	char divider[] = "-------------------------";   // machen sie so etwas const und global!
 
 	for (int count = 0; count < nimarraysize; count++) {
 
@@ -66,7 +82,9 @@ void NewMove(int* row, int* num, const int player, int nimdata[]) {
 	if (player == 1) {
 		printf("\nPLAYER MAKING MOVE: ");
 		AskPlayer(row, num);
-		if (*row >= nimarraysize || *num > nimdata[*row] || *num <= 0) {
+		if (*row >= nimarraysize || *num > nimdata[*row] || *num <= 0) { 
+        // das gilt nicht :-) Sie sollen den Benutzer zwingen eine sinnvolle eingabe zu machen. 
+        // sie können nach einigen fehlversuchen abbrechen. Das Spiel darf aber nicht ohne Zug weiter gespielt werden.
 			printf("\nDEAR USER: PLEASE PROVIDE CORRECT INPUT INFORMATION - 1 Move suspended\n");
 			fflush(stdin);
 			*row = 0;
@@ -87,6 +105,7 @@ void NewMove(int* row, int* num, const int player, int nimdata[]) {
 			}
 		}
 	}
+    // hier müssen zwei gültige Zahlen kommen!
 	printf("Removing %i from row %i\n", *num, *row);
 	nimdata[*row] = nimdata[*row] - *num;
 }
@@ -107,6 +126,6 @@ int CheckGameStatus(const int nimdata[]) {
 		sum = sum += nimdata[count];
 	}
 
-	if (sum != 0) { return 0; }
+	if (sum != 0) { return 0; } // das können sie schreiben als return (sum == 0)
 	else { return 1; }
 }
